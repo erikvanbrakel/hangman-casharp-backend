@@ -33,6 +33,8 @@ namespace HangmanBackend.Domain
         private List<char> guessedLetters;
         private List<char> missGuessedLetters;
 
+        public int TriesRemaining => triesRemaining;
+
         public Guid getAggregateRootId()
         {
             return new Guid(this.gameId);

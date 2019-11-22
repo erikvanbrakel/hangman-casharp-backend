@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangmanBackend", "HangmanBackend\HangmanBackend.csproj", "{698E6797-2EC0-41CE-8523-2D0416D41F4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangmanBackend.Tests", "HangmanBackend.Tests\HangmanBackend.Tests.csproj", "{891B94F2-BBED-45C7-8BBB-172D3017CE56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{698E6797-2EC0-41CE-8523-2D0416D41F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{698E6797-2EC0-41CE-8523-2D0416D41F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{698E6797-2EC0-41CE-8523-2D0416D41F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{891B94F2-BBED-45C7-8BBB-172D3017CE56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891B94F2-BBED-45C7-8BBB-172D3017CE56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891B94F2-BBED-45C7-8BBB-172D3017CE56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891B94F2-BBED-45C7-8BBB-172D3017CE56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

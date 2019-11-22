@@ -6,7 +6,7 @@ using HangmanBackend.Domain;
 
 namespace HangmanBackend.Infrastructure
 {
-    public class EventStoreRepository<TAggregate> where TAggregate : AggregateRoot
+    public class EventStoreRepository<TAggregate> : IRepository<TAggregate> where TAggregate : AggregateRoot
     {
         private IEventStoreConnection connection;
 
@@ -47,7 +47,7 @@ namespace HangmanBackend.Infrastructure
             } while (!currentSlice.IsEndOfStream);
         }
 
-        public AggregateRoot Load(Guid streamId)
+        public TAggregate Load(Guid streamId)
         {
             Console.WriteLine($"[{streamId.ToString()}] Loading aggregate root");
 

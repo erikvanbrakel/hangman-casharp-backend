@@ -7,9 +7,9 @@ namespace HangmanBackend.Application
 {
     public class HangmanCommandHandler
     {
-        private EventStoreRepository<Game> repository;
+        private IRepository<Game> repository;
         
-        public HangmanCommandHandler(EventStoreRepository<Game> repository)
+        public HangmanCommandHandler(IRepository<Game> repository)
         {
             this.repository = repository;
         }
