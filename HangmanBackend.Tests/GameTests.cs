@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using FluentAssertions;
 using HangmanBackend.Application;
 using HangmanBackend.Domain;
 using Xunit;
@@ -23,7 +25,21 @@ namespace HangmanBackend.Tests
                 game.guessLetter(new GuessLetter(gameId, 'x'));
                
                 // assert
-                Assert.Equal(expectedTriesRemaining, game.TriesRemaining);
+                game.TriesRemaining.Should().Be(expectedTriesRemaining);
+            }
+
+            [Fact]
+            public void When_an_incorrect_letter_is_guessed_using_events()
+            {
+                // arrange
+                var gameId = Guid.NewGuid();
+                var game = new Game();
+                game.Apply(new GameStarted("account-id", gameId.ToString(), "word", 0));
+
+                // act
+                game.guessLetter(new GuessLetter(gameId, 'x'));
+
+                game.UncommittedEvents.Should().Contain(e => e.Type == typeof(LetterNotGuessed).FullName);
             }
         }
     }

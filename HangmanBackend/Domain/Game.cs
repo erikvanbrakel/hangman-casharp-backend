@@ -40,10 +40,7 @@ namespace HangmanBackend.Domain
             return new Guid(this.gameId);
         }
 
-        public List<EventData> getUncommittedEvents()
-        {
-            return uncommittedEvents;
-        }
+        public IList<EventData> UncommittedEvents => uncommittedEvents;
 
         public void setExpectedPlayHead(int expectedPlayHead)
         {

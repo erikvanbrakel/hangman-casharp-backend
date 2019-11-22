@@ -7,7 +7,7 @@ namespace HangmanBackend.Domain
     public interface AggregateRoot
     {
         Guid getAggregateRootId();
-        List<EventData> getUncommittedEvents();
+        IList<EventData> UncommittedEvents { get; }
         int getPlayHead();
     }
 }

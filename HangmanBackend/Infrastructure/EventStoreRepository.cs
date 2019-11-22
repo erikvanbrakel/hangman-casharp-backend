@@ -17,7 +17,7 @@ namespace HangmanBackend.Infrastructure
 
         public void Save(TAggregate aggregateRoot)
         {
-            var uncommittedEvents = aggregateRoot.getUncommittedEvents();
+            var uncommittedEvents = aggregateRoot.UncommittedEvents;
             var originalPlayHead = aggregateRoot.getPlayHead() - uncommittedEvents.Count;
 
             foreach (var domainEvent in uncommittedEvents)
